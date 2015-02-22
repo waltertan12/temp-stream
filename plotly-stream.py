@@ -16,7 +16,7 @@ trace1 = Scatter(
 	y=[],
 	stream=dict(
 		token=stream_token,
-		maxpoints=200
+		maxpoints=20000
 	)
 )
 
