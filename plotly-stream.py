@@ -32,5 +32,7 @@ stream = py.Stream(stream_token)
 stream.open()
 
 while True:
-	stream.write({'x': datetime.datetime.now(), 'y': temp.toF(temp.readTemp())})
+	temperature = temp.toF(temp.readTemp())
+	stream.write({'x': datetime.datetime.now(), 'y': temperature})
+	temp.logData(temperature)
 	time.sleep(60)
